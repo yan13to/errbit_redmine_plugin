@@ -108,7 +108,7 @@ module ErrbitRedminePlugin
         self.user = user
         self.password = passwd
         self.site = acc
-        self.format = :xml
+        self.format = :json
       end
 
       issue = RedmineClient::Issue.new(:project_id => project_id)
