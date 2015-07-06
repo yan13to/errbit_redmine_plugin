@@ -108,13 +108,14 @@ module ErrbitRedminePlugin
         self.user = user
         self.password = passwd
         self.site = acc
-        self.format = :json
+        self.format = :xml
       end
 
       issue = RedmineClient::Issue.new(:project_id => project_id)
       issue.subject = title
       issue.description = body
       issue.tracker_id = tracker_id if tracker_id.present?
+
       issue.save!
 
       issue_link(issue)
