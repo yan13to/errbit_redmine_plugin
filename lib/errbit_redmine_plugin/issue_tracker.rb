@@ -32,6 +32,14 @@ module ErrbitRedminePlugin
         :optional    => true,
         :label       => "Issue Tracker Id",
         :placeholder => "The tracker where tickets will be created. (Leave blank to use default)"
+      }],
+      [:status_id, {
+        :label => "Issue Status Id",
+        :placeholder => "Status of issue"
+      }],
+      [:priority_id, {
+        :label => "Issue Priority Id",
+        :placeholder => "Priority of issue"
       }]
     ]
 
